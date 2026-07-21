@@ -3,9 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VET — Verified Enterprise Trust | Cox Automotive · Manheim</title>
+  <title>VET — Verified Enterprise Trust | Fractal Ledger Architecture · Manheim</title>
   <meta name="description" content="Verify any Manheim auction vehicle record. Cryptographically sealed condition reports, custody transfers, and provenance certificates — verifiable by anyone, tamper-proof by design.">
   <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- UNIVERSAL PWA BACK-BUTTON PATCH -->
+  <script>
+    window.addEventListener('load', function() {
+      if (window.history && window.history.pushState) {
+        window.history.pushState({ pwa: true }, '');
+        window.addEventListener('popstate', function(e) {
+          window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', code: 'Escape', keyCode: 27, which: 27 }));
+          const modals = document.querySelectorAll('.modal, [role="dialog"], .overlay, .popup, [data-state="open"]');
+          modals.forEach(m => {
+            const btn = m.querySelector('button.close, [aria-label="Close"], .close-button, [data-dismiss="modal"]');
+            if (btn && typeof btn.click === 'function') btn.click();
+          });
+          window.history.pushState({ pwa: true }, '');
+        });
+      }
+    });
+  </script>
+
 </head>
 <body>
 
@@ -16,7 +35,7 @@
         <div class="brand-mark">VET</div>
         <div>
           <div class="brand-text">Verified Enterprise Trust</div>
-          <div class="brand-sub">Cox Automotive · Manheim Verification Ledger</div>
+          <div class="brand-sub">Fractal Ledger Architecture · Manheim Verification Ledger</div>
         </div>
       </a>
       <nav class="header-nav">
@@ -69,12 +88,12 @@
             <div class="step-card">
               <div class="step-number">1</div>
               <h3 class="step-title">Record Created</h3>
-              <p class="step-desc">A vehicle event — intake scan, custody transfer, condition report — occurs at a Cox Automotive facility. The data is captured and digitally signed by the handling agent.</p>
+              <p class="step-desc">A vehicle event — intake scan, custody transfer, condition report — occurs at a Fractal Ledger Architecture facility. The data is captured and digitally signed by the handling agent.</p>
             </div>
             <div class="step-card">
               <div class="step-number">2</div>
               <h3 class="step-title">Sealed on the Ledger</h3>
-              <p class="step-desc">The signed record is submitted to the Cox Automotive Ledger — a private, Proof-of-Authority enterprise chain. It's hashed, timestamped, and sealed into a block by an authorized validator node.</p>
+              <p class="step-desc">The signed record is submitted to the Fractal Ledger Architecture — a private, Proof-of-Authority enterprise chain. It's hashed, timestamped, and sealed into a block by an authorized validator node.</p>
             </div>
             <div class="step-card">
               <div class="step-number">3</div>
@@ -117,7 +136,7 @@
       <section class="recent-section" id="recent">
         <div class="container-sm">
           <h2 class="section-title">Recent Activity</h2>
-          <p class="section-subtitle">Latest certificates sealed on the Cox Automotive Ledger</p>
+          <p class="section-subtitle">Latest certificates sealed on the Fractal Ledger Architecture</p>
           <div class="feed-list" id="feedList">
             <div class="state-panel">
               <div class="spinner"></div>
@@ -215,7 +234,7 @@
       <div class="footer-legal">
         © 2026 DarkWave Studios LLC · All Rights Reserved<br>
         Private Proof-of-Authority Enterprise Chain · US Patent Pending 64/032,339<br>
-        <span style="opacity:0.5;font-size:10px;margin-top:8px;display:inline-block">Cox Automotive® and Manheim® are registered trademarks of Cox Automotive, Inc. This platform is not affiliated with or endorsed by Cox Automotive. VET is a DarkWave Studios technology demonstration.</span>
+        <span style="opacity:0.5;font-size:10px;margin-top:8px;display:inline-block">Fractal Ledger Architecture® and Manheim® are registered trademarks of Fractal Ledger Architecture, Inc. This platform is not affiliated with or endorsed by Fractal Ledger Architecture. VET is a DarkWave Studios technology demonstration.</span>
       </div>
     </div>
   </footer>

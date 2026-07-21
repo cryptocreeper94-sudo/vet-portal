@@ -1,11 +1,11 @@
 /**
  * VET Portal — CAL API Client
- * Connects to the Cox Automotive Ledger backend
+ * Connects to the Fractal Ledger Architecture backend
  */
 
 const API_BASE = window.location.hostname === 'localhost'
-  ? 'https://cox-automotive-ledger.onrender.com'
-  : 'https://cox-automotive-ledger.onrender.com';
+  ? 'https://FLA-automotive-ledger.onrender.com'
+  : 'https://FLA-automotive-ledger.onrender.com';
 
 const API_KEY = ''; // Public read endpoints don't require auth
 

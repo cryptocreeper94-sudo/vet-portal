@@ -1,7 +1,7 @@
 {
   "name": "vet-portal",
   "version": "1.0.0",
-  "description": "VET — Verified Enterprise Trust. Customer-facing verification portal for Cox Automotive Ledger certificates.",
+  "description": "VET — Verified Enterprise Trust. Customer-facing verification portal for Fractal Ledger Architecture certificates.",
   "scripts": {
     "dev": "npx -y serve public -l 3100",
     "build": "echo 'Static site — no build step required'"

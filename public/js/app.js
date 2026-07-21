@@ -275,7 +275,7 @@ async function loadPassport(vin) {
       <div class="state-panel">
         <div class="state-icon">🚗</div>
         <div class="state-title">Vehicle Not Found</div>
-        <div class="state-desc">No records for VIN "<strong>${escapeHtml(vin)}</strong>" were found on the ledger.<br>This vehicle may not have been processed through a Cox Automotive facility yet.</div>
+        <div class="state-desc">No records for VIN "<strong>${escapeHtml(vin)}</strong>" were found on the ledger.<br>This vehicle may not have been processed through a Fractal Ledger Architecture facility yet.</div>
       </div>`;
   }
 }
